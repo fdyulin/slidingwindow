@@ -1,18 +1,18 @@
 Package: slidingwindow
 Type: Package
 Title: Sliding Window Accelerometer Processing
-Version: 0.1.0
-Author: Lin Chen
-Maintainer: Lin Chen <lin.chen@ki.se>
+Version: 0.1.1
+Authors@R: c(
+    person("Lin", "Chen", role = c("aut","cre"), email="lin.chen@ki.se"),
+    person("Johan", "Blixt Dackhammar", role = c("ctb"), email="johan.blixt.dackhammar@ki.se"))
 Description: Tools for reading 3-axis accelerometer data, computing Euclidean norms, applying sliding-window algorithms, and visualizing results.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Imports: 
-    ggplot2
-Depends: 
-    tidyverse
+RoxygenNote: 7.3.3
+Imports:
+    ggplot2,
+    rlang
 URL: https://github.com/fdyulin/slidingwindow
 BugReports: https://github.com/fdyulin/slidingwindow/issues
