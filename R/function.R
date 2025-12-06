@@ -20,7 +20,7 @@ binary_window <- function(window_vec){
   if(tail(window_vec,1) > window_vec[1]) 1 else -1
 }
 
-threshold_window <- function(window_vec, threshold=0.5) {
+threshold_window <- function(window_vec, threshold) {
 
   diff_val <- max(window_vec) - min(window_vec)
 
@@ -51,7 +51,7 @@ slide_window_threshold <- function(df, col="acc_vector", window_size, threshold)
   for (i in 1:(n - window_size)) {
 
     window_vec <- df[[col]][i:(i + window_size - 1)]
-    result[i]  <- threshold_window(window_vec)
+    result[i]  <- threshold_window(window_vec, threshold)
   }
 
   df$window_result <- result
